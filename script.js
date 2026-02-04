@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   }
   function renderTask(task){
     const li=document.createElement("li")
+    if (task.completed) li.classList.add("completed");
     li.setAttribute("data-id",task.id)
     li.innerHTML = `
     <span>${task.text}</span>
